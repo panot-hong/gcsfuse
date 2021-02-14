@@ -16,6 +16,8 @@ docker run -d --privileged --device=/dev/fuse -v $(pwd)/secret:/etc/gcloud -e PA
 ```
 Running above command will create and run a container that accommodate a gcsfuse inside.
 
+**Flag `--privileged` is required for gcsfuse.**
+
 ### Environment Variables
 `PATH_TO_MOUNT` - path within the container to mount to the gcsfuse - <i>default is /mnt</i>.  
 `GCS_BUCKET` - Google Cloud Storage bucket name to mount to - <i>default is /my-bucket</i>.  
